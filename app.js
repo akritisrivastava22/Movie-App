@@ -32,9 +32,6 @@ async function handleSearch(event) {
     Poster,
   } = show;
 
-  // const moviePoster = document.getElementById("photo");
-  // moviePoster.src = image;
-
   const movieimg = document.getElementById("photo");
   movieimg.src = Poster;
 

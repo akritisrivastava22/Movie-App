@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Document</title>
-</head>
-<body>
-  <div class="">
-  <form onsubmit="handleSearch(event)" class="flex items-center px-20 mt-20">   
-    <label for="simple-search" class="sr-only">Search</label>
-    <div class="relative w-full">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-gradient-to-r from-slate-400 via-gray-200 to-slate-400">
+    <img class="w-[1400px] h-[300px]" src="./image.jpg" alt="" />
+    <div >
+    <div class="">
+      <form onsubmit="handleSearch(event)" class="flex items-center px-20 mt-5">
+        <label for="simple-search" class="sr-only">Search</label>
+        <div class="relative w-full">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5 text-gray-500 dark:text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="simple-search"
+            class="mr-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search"
+            required
+          />
         </div>
-        <input type="text" id="simple-search" class="mr-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10  p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+        <button
+          type="submit"
+          class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
     </div>
-    <button  type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        <span class="sr-only">Search</span>
-    </button>
-</form>
-</div>
-<div>
-  <img id="photo" src="" alt="">
-  <div>
-    <h1 id="Title"></h1>
-    <h1 id="Year"></h1>
-    <h1 id="Rated"></h1>
-    <h1 id="Released"></h1>
-    <h1 id="Runtime"></h1>
-    <h1 id="Genre"></h1>
-    <h1 id="Director"></h1>
-    <h1 id="Writer"></h1>
-    <h1 id="Actors"></h1>
-    <h1 id="Plot"></h1>
-    <h1 id="Language"></h1>
-    <h1 id="Country"></h1>
-    <h1 id="Awards"></h1>
+      <div class="flex mt-5 gap-[2rem] mx-20 font-semibold">
+        <img id="photo" src="" alt="" class="rounded-lg" />
+        <div class="font-mono">
+          <h1 class="text-3xl font-bold" id="Title"></h1>
+          <h1 class="text-xl" id="Year"></h1>
+          <h1 class="rounded-lg bg-black text-white mr-20 text-center" id="Rated"></h1>
+          <h1 class="mt-3" id="Released"></h1>
+          <h1 id="Runtime"></h1>
+          <h1 id="Genre"></h1>
+          <h1 id="Director"></h1>
+          <h1 id="Writer"></h1>
+          <h1 class="mt-3" id="Actors"></h1>
+          <p class="mt-3" id="Plot"></p>
+          <h1 class="mt-3" id="Language"></h1>
+          <h1 class="mt-1" id="Country"></h1>
+          <h1 id="Awards"></h1>
+        </div>
+      </div>
+    
   </div>
-</div>
-
-<script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>
