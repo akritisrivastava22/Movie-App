@@ -9,9 +9,7 @@ async function handleSearch(event) {
   const result = await fetch(
     `https://www.omdbapi.com/?apikey=a46c2bf6&t=${moviename}`
   );
-  const image = await fetch(
-    `http://img.omdbapi.com/?apikey=a46c2bf6&t=${moviename}`
-  );
+ 
   const show = await result.json();
   console.log(show);
 
