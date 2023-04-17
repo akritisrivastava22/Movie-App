@@ -2,17 +2,17 @@ const input = document.getElementsByTagName("input")[0];
 
 async function handleSearch(event) {
   event.preventDefault();
-  // if(input.status != 200){
-  //   alert("Enter correct movie name");
-  // }
+  
   const moviename = input.value;
   const result = await fetch(
     `https://www.omdbapi.com/?apikey=a46c2bf6&t=${moviename}`
   );
- 
   const show = await result.json();
   console.log(show);
-
+    if (show.Response === "False") {
+      alert("Enter a valid movie name");
+      return ;
+    }
   const {
     Title,
     Year,
