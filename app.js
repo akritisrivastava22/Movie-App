@@ -9,6 +9,7 @@ async function handleSearch(event) {
   );
   const show = await result.json();
   console.log(show);
+  
     if (show.Response === "False") {
       alert("Enter a valid movie name");
       return ;
@@ -33,42 +34,42 @@ async function handleSearch(event) {
   const movieimg = document.getElementById("photo");
   movieimg.src = Poster;
 
-  const name = document.getElementById("Title");
+  const name = document.getElementById("title");
   name.innerHTML = Title;
 
-  const movieyear = document.getElementById("Year");
+  const movieyear = document.getElementById("year");
   movieyear.innerHTML = Year;
 
-  const movieRated = document.getElementById("Rated");
+  const movieRated = document.getElementById("rated");
   movieRated.innerHTML = Rated;
 
-  const movieReleased = document.getElementById("Released");
+  const movieReleased = document.getElementById("released");
   movieReleased.innerHTML = Released;
 
-  const movieRuntime = document.getElementById("Runtime");
+  const movieRuntime = document.getElementById("runtime");
   movieRuntime.innerHTML = Runtime;
 
-  const movieGenre = document.getElementById("Genre");
+  const movieGenre = document.getElementById("genre");
   movieGenre.innerHTML = Genre;
 
-  const movieDirector = document.getElementById("Director");
+  const movieDirector = document.getElementById("director");
   movieDirector.innerHTML = Director;
 
-  const movieWriter = document.getElementById("Writer");
+  const movieWriter = document.getElementById("writer");
   movieWriter.innerHTML = Writer;
 
-  const movieActors = document.getElementById("Actors");
+  const movieActors = document.getElementById("actors");
   movieActors.innerHTML = Actors;
 
-  const moviePlot = document.getElementById("Plot");
+  const moviePlot = document.getElementById("plot");
   moviePlot.innerHTML = Plot;
 
-  const movieLanguage = document.getElementById("Language");
+  const movieLanguage = document.getElementById("language");
   movieLanguage.innerHTML = Language;
 
-  const movieCountry = document.getElementById("Country");
+  const movieCountry = document.getElementById("country");
   movieCountry.innerHTML = Country;
 
-  const movieAwards = document.getElementById("Awards");
+  const movieAwards = document.getElementById("awards");
   movieAwards.innerHTML = Awards;
 }
